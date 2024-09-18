@@ -1,7 +1,9 @@
-Role Name
+Barrier config
 =========
 
-A brief description of the role goes here.
+Barrier Configuration.
+
+Use the var: "barrier_role" to set either 'client' or 'server' in playbook host_vars! There's an example in .graph/example/uni.yml
 
 Requirements
 ------------
