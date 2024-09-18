@@ -1,9 +1,9 @@
 ---
 
 - debug:
-    msg: "IP: {{ client_hostname }}"
+    msg: "Client IP: {{ client_hostname }}"
   when: barrier_role == "server"
 
 - debug:
-    msg: "IP: {{ server_hostname }}"
+    msg: "Server IP: {{ server_hostname }}"
   when: barrier_role == "client"

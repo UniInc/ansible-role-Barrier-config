@@ -1,4 +1,5 @@
 ---
+
 # Get the Other node's IP, May have more than 2 for multi-monitor!
 - name: Get Client IP
   set_fact:
