@@ -1,10 +1,6 @@
 ---
 - name: get
-  include_tasks: "get/main.yml"
+  include_tasks: get/main.yml
 
 - name: template
   include_tasks: template.yml
-
-
-- debug:
-    msg: "----- {{ debug }} ----"
