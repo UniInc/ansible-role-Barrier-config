@@ -1,9 +1,13 @@
-barrier_role: client #server
-
-template: simple
-
-debug: true #false
-
 # Set num to get specific Network interface:
 interface_num_client: 0
 interface_num_server: 0
+
+barrier_role: client # server
+
+template: simple
+
+debug: false
+
+# Inventory
+primary_group: primary_desktop
+second_group: second_desktop

@@ -3,13 +3,13 @@
 - name: Get Client IP
   set_fact:
     client_hostname: "{{ hostvars[item]['ansible_all_ipv4_addresses'][interface_num_client] }}"
-  with_items: "{{ groups['barrier_client'][0] }}"
+  with_items: "{{ groups[second_group][0] }}"
   when: barrier_role == "server"
 
 - name: Get Server IP
   set_fact:
     server_hostname: "{{ hostvars[item]['ansible_all_ipv4_addresses'][interface_num_server] }}"
-  with_items: "{{ groups['barrier_server'][0] }}"
+  with_items: "{{ groups[primary_group][0] }}"
   when: barrier_role == "client"
 
 - name: get
