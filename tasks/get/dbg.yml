@@ -4,7 +4,6 @@
     msg: "IP: {{ client_hostname }}"
   when: barrier_role == "server"
 
-
 - debug:
     msg: "IP: {{ server_hostname }}"
   when: barrier_role == "client"

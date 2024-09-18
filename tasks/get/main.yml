@@ -12,10 +12,9 @@
   with_items: "{{ groups['barrier_server'][0] }}"
   when: barrier_role == "client"
 
-
-# - name: get
-#   include_tasks: "dbg.yml"
-#   when: debug
+- name: get
+  include_tasks: "dbg.yml"
+  when: debug
 
 # Alternate:
     # client_ip: "{{ hostvars[item]['ansible_default_ipv4']['address'] }}"
