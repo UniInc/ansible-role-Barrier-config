@@ -1,3 +1,5 @@
 barrier_role: client #server
 
 template: simple
+
+debug: true #false

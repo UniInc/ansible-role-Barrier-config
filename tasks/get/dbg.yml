@@ -1,0 +1,10 @@
+---
+
+- debug:
+    msg: "IP: {{ client_ip }}"
+  when: barrier_role == "server"
+
+
+- debug:
+    msg: "IP: {{ server_ip }}"
+  when: barrier_role == "client"

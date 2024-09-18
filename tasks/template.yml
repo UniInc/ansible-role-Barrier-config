@@ -1,0 +1,17 @@
+---
+
+- name: Create config directory
+  ansible.builtin.file:
+    path: "{{ config_dir }}"
+    state: directory
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
+    mode: '0775'
+
+- name: Template Barrier config
+  ansible.builtin.template:
+    src: "{{ template }}/{{ barrier_role }}/Barrier.conf.j2"
+    dest: "{{ config_dir }}/Debauchee/Barrier.conf"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
+    mode: '0664'
