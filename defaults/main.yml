@@ -1,0 +1,3 @@
+barrier_role: client #server
+
+template: simple

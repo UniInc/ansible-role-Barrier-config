@@ -1,0 +1,11 @@
+# - name: OS specific
+#   include_tasks: "{{ barrier_role }}/main.yml"
+
+
+- name: Copy Barrier config
+  ansible.builtin.copy:
+    src: "{{ template }}/{{ barrier_role }}/.config/Debauchee"
+    dest: "/home/{{ ansible_env.USER }}/.config/"
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
+  # delegate_to: '{{ groups.server[0] }}'
