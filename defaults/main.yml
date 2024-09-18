@@ -3,3 +3,6 @@ barrier_role: client #server
 template: simple
 
 debug: true #false
+
+interface_num_client: 0
+interface_num_server: 0
